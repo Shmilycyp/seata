@@ -48,8 +48,7 @@ public class ChannelUtil {
      * @return client ip
      */
     public static String getClientIpFromChannel(Channel channel) {
-        String address = getAddressFromChannel(channel);
-        String clientIp = address;
+        String clientIp = getAddressFromChannel(channel);
         if (clientIp.contains(Constants.IP_PORT_SPLIT_CHAR)) {
             clientIp = clientIp.substring(0, clientIp.lastIndexOf(Constants.IP_PORT_SPLIT_CHAR));
         }
